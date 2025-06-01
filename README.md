@@ -1,4 +1,5 @@
 
+Test de copie d'un site, utilisant l'IA.
 
 Installation du projet :
 
@@ -13,3 +14,9 @@ dans package.json
 Lancer le déploiement
 npm run deploy
 
+npm i
+npm install react-router-dom
+npm i react-router
+npm i styled-components
+npm install tailwindcss @tailwindcss/vite
+npm install bootstrap @popperjs/core
