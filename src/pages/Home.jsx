@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IMAGES_URL, LOGO_URL } from '../constants/apiConstant';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
   max-width: 1200px;
@@ -53,6 +54,8 @@ const PartnerBanner = styled.div`
 
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Header>
@@ -83,11 +86,9 @@ const Home = () => {
               </h1>
             </div>
             <div className="col-12 mt-3">
-              <a href="https://sante-chat.com/analyse">
-                <Button className="btn btn-primary btn-lg">
-                  Commencer
-                </Button>
-              </a>
+              <Button onClick={() => navigate('/analyse')} className="btn btn-primary btn-lg">
+                Commencer
+              </Button>
             </div>
           </div>
         </div>
@@ -139,7 +140,7 @@ const Home = () => {
             <h2>Une bonne nourriture pour chat, <GreenText>c'est quoi ?</GreenText></h2>
             <p>Le taux de protéines est particulièrement important. Ce taux est souvent méconnu, trop faible parmi les nourritures bas marché ce qui produit des carences alimentaires.</p>
             <p>L'alimentation et son dosage doit aussi être adaptée aux caractéristiques de votre chat : vérifiez du nom, âge, poids, allergies... tout très important pour définir précisément ce dont votre chat a besoin.</p>
-            <Button className='btn btn-primary btn-lg mt-3'>Commencer</Button>
+            <Button onClick={() => navigate('/analyse')} className='btn btn-primary btn-lg mt-3'>Commencer</Button>
           </div>
           <div className='col-lg-4 d-flex justify-content-center align-items-center'>
             <img className='w-100 max-w-[160px]' src={`${IMAGES_URL}/illu-home-2.png`} alt="Qualité alimentaire" />
@@ -163,7 +164,7 @@ const Home = () => {
           <h2>Quelles marque de croquettes <GreenText>choisir ?</GreenText></h2>
           <p>Les marques de supermarché ou grand publiques contiennent souvent trop peu de protéines et ont des compositions de faible qualité.</p>
           <p>Pour les croquettes, nous conseillons d'opter pour des croquettes de "qualité vétérinaire" en portant attention au taux de protéines ainsi qu'à l'origine des aliments.</p>
-          <Button>Commencer</Button>
+          <Button onClick={() => navigate('/analyse')}>Commencer</Button>
         </div>
         <div className='d-flex justify-content-center align-items-center'>
           <img className='w-100 max-w-[142px]' src={`${IMAGES_URL}/illu-home-4.png`} alt="Sac de croquettes" />

@@ -3,3 +3,5 @@
 export const IMAGES_URL = "images/"
 
 export const LOGO_URL = `${IMAGES_URL}logo/`
+
+export const FOOD_URL = `${IMAGES_URL}/foods/`

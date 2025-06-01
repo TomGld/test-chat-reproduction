@@ -42,3 +42,184 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Styles généraux */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header styles */
+.analyse-banner-container {
+    background-color: #22c55e;
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.analyse-banner-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.analyse-banner-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Résultat styles */
+.ResultAnalyse {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ResultAnalyse .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.ResultAnalyse h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Note styles */
+.notation {
+    text-align: center;
+}
+
+.note {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #22c55e;
+}
+
+.rank_sup {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Badges styles */
+.badge {
+    display: inline-block;
+    padding: .35em .65em;
+    padding-top: 6px;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.badge.rounded-pill {
+    border-radius: 50rem !important;
+}
+
+.badge-2 {
+    background-color: #038141;
+}
+
+.badge-3 {
+    background-color: #87b72e;
+}
+
+/* Table styles */
+.nutrition-table {
+    margin-top: 1rem;
+    border: 1px solid #dee2e6;
+    width: 100%;
+}
+
+.nutrition-table td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.nutrition-table td:first-child {
+    padding-left: 8px;
+}
+
+.nutrition-table .indicator-name {
+    margin-right: 0.5rem;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.color-badge-2, .color-badge-3 {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    border-left: 1px solid #dee2e6;
+}
+
+/* Summary styles */
+.summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+.summary h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Image styles */
+.image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.image img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Modal styles */
+.modal-content {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
