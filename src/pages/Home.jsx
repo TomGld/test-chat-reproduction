@@ -9,14 +9,6 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-const Header = styled.header`
-  text-align: center;
-  margin-bottom: 40px;
-`;
-
-const Logo = styled.img`
-  max-width: 200px;
-`;
 
 const Section = styled.section`
   margin-bottom: 40px;
@@ -58,11 +50,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Header>
-        <a href="/">
-        <Logo src={`${LOGO_URL}/logo.png`} alt="SantéChat.com" />
-        </a>
-      </Header>
+
 
       <div className="row" id="home-banner-container">
         <div className="col-6" id="home-banner-left">

@@ -4,7 +4,7 @@ export const products = {
     id: "ziggy-sterilise-poulet",
     name: "Stérilisé Poulet",
     brand: "Ziggy",
-    image: "2914.jpg",
+    image: "/test-chat-reproduction/images/foods/2914.jpg",
     score: 8.1,
     type: "sterilised",
     age: "adult",
@@ -24,7 +24,7 @@ export const products = {
     id: "carnilove-healthy-growth",
     name: "Healthy Growth saumon et dinde",
     brand: "Carnilove",
-    image: "/images/foods/1614.jpg",
+    image: "/test-chat-reproduction/images/foods/1614.jpg",
     score: 9.2,
     type: "kitten",
     age: "kitten",
@@ -44,7 +44,7 @@ export const products = {
     id: "orijen-cat-kitten",
     name: "Cat & Kitten",
     brand: "Orijen",
-    image: "/images/foods/orijen-cat-kitten.jpg",
+    image: "/test-chat-reproduction/images/foods/orijen-cat-kitten.jpg",
     score: 9.5,
     type: "all",
     age: "all",
@@ -64,7 +64,7 @@ export const products = {
     id: "acana-first-feast",
     name: "First Feast Kitten",
     brand: "Acana",
-    image: "/images/foods/acana-first-feast.jpg",
+    image: "/test-chat-reproduction/images/foods/acana-first-feast.jpg",
     score: 9.0,
     type: "kitten",
     age: "kitten",
@@ -78,6 +78,34 @@ export const products = {
       sansCereales: true
     },
     summary: "Les croquettes Acana First Feast sont spécialement formulées pour les chatons, avec une excellente teneur en protéines et des ingrédients de qualité."
+  }
+};
+
+// Informations pour les modales d'explication
+export const modalInfo = {
+  proteins: {
+    title: "Protéines",
+    content: "Le chat est un carnivore strict. Son organisme a donc essentiellement besoin de protéines animales de qualité pour se développer correctement et rester en bonne santé."
+  },
+  rpc: {
+    title: "Ratio Protido-calorique",
+    content: "Le rapport protido-calorique (RPC) évalue la concentration en protéines d'un aliment par rapport aux calories qu'il apporte. Un RPC élevé garantit à votre chat un apport élevé en protéines lors dans son repas."
+  },
+  glucides: {
+    title: "Glucides",
+    content: "Il est important de limiter au maximum les glucides dans l'alimentation des chats, car ils n'apportent pas de bénéfices nutritionnels significatifs et peuvent entraîner surpoids et obésité."
+  },
+  rpp: {
+    title: "Ratio Protido-phosphorique",
+    content: "Le rapport protido-phosphorique (RPP) évalue la qualité des protéines contenue dans les croquettes. Un RPP élevé est une garantie de la qualité des protéines présentes dans la croquette."
+  },
+  mineraux: {
+    title: "Minéraux",
+    content: "Les minéraux sont indispensables au bien-être des chats, contribuant à leur santé osseuse et à une fonction rénale optimale, toutefois, une attention particulière doit être portée pour ne pas excéder les limites recommandées afin de prévenir les troubles urinaires ou rénaux"
+  },
+  cereales: {
+    title: "Céréales",
+    content: "Les céréales sont souvent utilisées dans les croquettes pour leur coût réduit, mais elles peuvent causer des troubles digestifs chez les chats, rendant leur présence dans l'alimentation moins recommandable."
   }
 };
 

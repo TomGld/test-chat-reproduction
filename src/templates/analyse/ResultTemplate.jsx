@@ -1,7 +1,6 @@
 import React from 'react';
-import { modalInfo } from './foodData';
+import { modalInfo } from '../../data/products';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FOOD_URL } from '../../constants/apiConstant';
 
 const ResultTemplate = ({ productData }) => {
   const getBadgeClass = (rating) => {
@@ -18,8 +17,6 @@ const ResultTemplate = ({ productData }) => {
     if (score >= 7) return 'note--7';
     return 'note--6';
   };
-
-  console.log(`${FOOD_URL}${productData.image}`);
 
   return (
     <div className="body_wrap">
@@ -47,7 +44,7 @@ const ResultTemplate = ({ productData }) => {
           <div className="ResultAnalyse">
             {productData.image && (
               <div className="image">
-                <img src={`${FOOD_URL}${productData.image}`} alt={`${productData.brand} ${productData.name}`} />
+                <img src={productData.image} alt={`${productData.brand} ${productData.name}`} />
               </div>
             )}
             <div className="header">
