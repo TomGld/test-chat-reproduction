@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { modalInfo } from '../../data/products';
+import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ResultTemplate = ({ productData }) => {
+  const [activeModal, setActiveModal] = useState(null);
+
+  const handleModalShow = (key) => setActiveModal(key);
+  const handleModalClose = () => setActiveModal(null);
+
   const getBadgeClass = (rating) => {
     switch(rating.toLowerCase()) {
       case 'excellent': return 'badge-2';
@@ -69,7 +75,7 @@ const ResultTemplate = ({ productData }) => {
                           <td className="text-end">
                             <div className="pe-2">
                               {value ? '✅' : '❌'}
-                              <i className="info" data-bs-toggle="modal" data-bs-target="#cerealesModal" />
+                              <i className="info" onClick={() => handleModalShow('cereales')} />
                             </div>
                           </td>
                         </tr>
@@ -89,7 +95,7 @@ const ResultTemplate = ({ productData }) => {
                             <span className={`badge rounded-pill ${getBadgeClass(value.rating)}`}>
                               {value.rating.charAt(0).toUpperCase() + value.rating.slice(1)}
                             </span>
-                            <i className="info" data-bs-toggle="modal" data-bs-target={`#${key}Modal`} />
+                            <i className="info" onClick={() => handleModalShow(key)} />
                           </div>
                         </td>
                       </tr>
@@ -107,19 +113,21 @@ const ResultTemplate = ({ productData }) => {
         </div>
       </div>
 
-      {/* Modales */}
+      {/* Modales React Bootstrap */}
       {Object.entries(modalInfo).map(([key, info]) => (
-        <div key={key} className="modal" id={`${key}Modal`} tabIndex="-1">
-          <div className="modal-dialog">
-            <div className="modal-content position-relative">
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              <div>
-                <h2 className="text-center">{info.title}</h2>
-              </div>
-              <p className="text-center">{info.content}</p>
-            </div>
-          </div>
-        </div>
+        <Modal
+          key={key}
+          show={activeModal === key}
+          onHide={handleModalClose}
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title className="text-center w-100">{info.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p className="text-center">{info.content}</p>
+          </Modal.Body>
+        </Modal>
       ))}
     </div>
   );
