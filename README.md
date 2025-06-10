@@ -14,7 +14,9 @@ dans package.json
 Lancer le déploiement
 npm run deploy
 
+- Installer automatiquement :
 npm i
+- Installer manuellement :
 npm install styled-components
 npm install react-router-dom
 npm i react-router
@@ -22,3 +24,7 @@ npm i styled-components
 npm install tailwindcss @tailwindcss/vite
 npm install bootstrap @popperjs/core
 npm install react-bootstrap bootstrap @fortawesome/fontawesome-free
+
+- déployer le projet sur Gitub Pages :
+npm run build
+npm run deploy
